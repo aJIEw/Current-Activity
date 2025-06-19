@@ -3,11 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 32
+    compileSdk 35
+    namespace = "io.github.ratul.topactivity"
+
     defaultConfig {
         applicationId "io.github.ratul.topactivity"
-        minSdkVersion 24
-        targetSdkVersion 33
+        minSdk 24
+        targetSdk 35
         versionCode 18
         versionName "1.5.8"
     }

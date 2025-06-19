@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context="io.github.ratul.topactivity.ui.MainActivity">
 
     <LinearLayout
@@ -21,18 +22,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/textPrimary"
-            android:text="@string/show_window"/>
+            android:text="@string/show_window" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/sw_window"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/dividerColor"/>
+        android:background="@color/dividerColor" />
 
     <LinearLayout
         android:id="@+id/useNotificationPref"
@@ -49,19 +50,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/textPrimary"
-            android:text="@string/use_toggle_notification"/>
+            android:text="@string/use_toggle_notification" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/sw_notification"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/divider_useNotificationPref"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/dividerColor"/>
+        android:background="@color/dividerColor" />
+
     <LinearLayout
         android:id="@+id/useAccessibility"
         android:layout_width="match_parent"
@@ -77,17 +79,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/textPrimary"
-            android:text="Use Accessibility Service"/>
+            android:text="Use Accessibility Service" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/sw_accessibility"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/divider_useAccess"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/dividerColor"/>
+        android:background="@color/dividerColor" />
 </LinearLayout>

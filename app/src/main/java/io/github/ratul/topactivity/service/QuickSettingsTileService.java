@@ -73,7 +73,11 @@ public class QuickSettingsTileService extends TileService {
 
 	@Override
 	public void onStartListening() {
-		registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_TITLE));
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+			registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_TITLE), Context.RECEIVER_NOT_EXPORTED);
+		} else {
+			registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_TITLE));
+		}
 		super.onStartListening();
 		updateTile();
 	}
