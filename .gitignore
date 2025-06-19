@@ -2,6 +2,7 @@
 /.idea
 /*/build
 /build
+/local.properties
 /settings.json
 /app/app_config.json
 /app/libraries.json
