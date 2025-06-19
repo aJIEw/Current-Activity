@@ -119,8 +119,9 @@ public class MonitoringService extends Service {
 		Intent restartServiceIntent = new Intent(getApplicationContext(), this.getClass());
 		restartServiceIntent.setPackage(getPackageName());
 
-		PendingIntent restartServicePendingIntent = PendingIntent.getService(getApplicationContext(), 1,
-				restartServiceIntent, PendingIntent.FLAG_ONE_SHOT);
+		PendingIntent restartServicePendingIntent = PendingIntent.getService(
+				getApplicationContext(), 1, restartServiceIntent,
+				PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE);
 		AlarmManager alarmService = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
 		alarmService.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 500,
 				restartServicePendingIntent);
